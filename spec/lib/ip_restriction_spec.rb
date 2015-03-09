@@ -17,7 +17,7 @@ describe IpRestriction do
 
   describe 'configuration default values' do
     it 'gets the default file_path' do
-      expect(described_class.file_path).to eq "/etc/locaweb/office_ips_restriction.yml"
+      expect(described_class.file_path).to eq "config/ip_restriction.yml"
     end
   end
 end

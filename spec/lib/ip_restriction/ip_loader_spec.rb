@@ -14,6 +14,7 @@ describe IpRestriction::IpLoader do
       subject { described_class.new("/tmp/anyfile.txt") }
 
       it 'returns an empty array' do
+        expect(subject).to receive(:warn)
         expect(subject.load).to eq IpRestriction::IpLoader::DEFAULT_IPS
       end
     end
