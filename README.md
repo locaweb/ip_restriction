@@ -1,5 +1,7 @@
 # IpRestriction
 
+[![Build Status](https://travis-ci.org/locaweb/ip_restriction.svg?branch=master)](https://travis-ci.org/locaweb/ip_restriction)
+
 A simple way to create a white list of IPs that can do something. We create it to restrict some routes to work just for some IPs.
 
 If you are using Ruby on Rails you can add our `constraints` to restrict the access to `sidekiq` web interface.
