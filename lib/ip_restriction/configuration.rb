@@ -1,6 +1,6 @@
 module IpRestriction
   module Configuration
-    DEFAULT_FILE_PATH = "config/ip_restriction.yml"
+    DEFAULT_FILE_PATH = 'config/ip_restriction.yml'
 
     attr_accessor :file_path
 

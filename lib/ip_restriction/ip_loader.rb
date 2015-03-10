@@ -11,7 +11,7 @@ module IpRestriction
     end
 
     def load
-      unless File.exists? file_path
+      unless File.exist? file_path
         warn "LwIpRestriction: file #{file_path} does not exist"
         return DEFAULT_IPS
       end

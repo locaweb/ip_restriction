@@ -1,5 +1,5 @@
 module IpRestriction
-  classhAllowedIpsConstraint
+  class AllowedIpsConstraint
     def matches?(request)
       checker.allowed?(request.remote_ip)
     end

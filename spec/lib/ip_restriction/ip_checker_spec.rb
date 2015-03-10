@@ -1,7 +1,7 @@
 describe IpRestriction::IpChecker do
-  let(:allowed_ips) { [ '127.0.0.1' ] }
+  let(:allowed_ips) { ['127.0.0.1'] }
 
-  describe "#allowed?" do
+  describe '#allowed?' do
     subject(:allowed) { described_class.new(allowed_ips).allowed?(ip) }
 
     context 'when IP is NOT allowed' do

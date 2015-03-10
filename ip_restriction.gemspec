@@ -4,23 +4,24 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'ip_restriction/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "ip_restriction"
+  spec.name          = 'ip_restriction'
   spec.version       = IpRestriction::VERSION
-  spec.authors       = ["Locaweb"]
-  spec.email         = ["developers@locaweb.com.br"]
-  spec.description   = %q{IP restricion for IPs to use in rails routes in :constraints, for example to restrict access to URL /redis}
-  spec.summary       = %q{IP restricion for IPs to use in rails routes in :constraints, for example to restrict access to URL /redis}
-  spec.homepage      = ""
-  spec.license       = "MIT"
+  spec.authors       = ['Locaweb']
+  spec.email         = ['developers@locaweb.com.br']
+  spec.summary       = 'Restrict some IPs'
+  spec.description   = 'Restrict some IPs to do something'
+  spec.homepage      = ''
+  spec.license       = 'MIT'
 
-  spec.files         = Dir["lib/**/*"]
-  spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
-  spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
-  spec.require_paths = ["lib"]
+  spec.files = Dir['lib/**/*'].select { |f| File.file?(f) }
+  spec.test_files = spec.files.grep(/^spec\//)
+  spec.executables = []
+  spec.require_paths = %w(lib)
 
-  spec.add_development_dependency "bundler", "~> 1.3"
-  spec.add_development_dependency "rake"
-  spec.add_development_dependency "rspec"
-  spec.add_development_dependency "pry-byebug"
-  spec.add_development_dependency "geminabox"
+  spec.add_development_dependency 'pry-nav', '~> 0.2.0', '>= 0.2.4'
+  spec.add_development_dependency 'rspec', '~> 3.1.0', '>= 3.1.0'
+  spec.add_development_dependency 'rubocop', '~> 0.27.0', '>= 0.27.1'
+  # for documentation
+  spec.add_development_dependency 'yard', '~> 0.8.0', '>= 0.8.7'
+  spec.add_development_dependency 'redcarpet', '~> 3.2.0', '>= 3.2.2'
 end

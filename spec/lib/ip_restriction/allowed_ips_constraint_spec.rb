@@ -4,25 +4,27 @@ describe IpRestriction::AllowedIpsConstraint do
       .and_return([])
   end
 
-  describe "#matches?" do
-    let(:request) { double(remote_ip: 'any')}
+  describe '#matches?' do
+    let(:request) { double(remote_ip: 'any') }
 
-    context "when IP allowed" do
+    context 'when IP allowed' do
       before do
-        allow_any_instance_of(IpRestriction::IpChecker).to receive(:allowed?) { true }
+        allow_any_instance_of(IpRestriction::IpChecker)
+          .to receive(:allowed?) { true }
       end
 
-      it "returns true" do
+      it 'returns true' do
         expect(subject.matches?(request)).to eq true
       end
     end
 
-    context "when IP not allowed" do
+    context 'when IP not allowed' do
       before do
-        allow_any_instance_of(IpRestriction::IpChecker).to receive(:allowed?) { false }
+        allow_any_instance_of(IpRestriction::IpChecker)
+          .to receive(:allowed?) { false }
       end
 
-      it "returns false" do
+      it 'returns false' do
         expect(subject.matches?(request)).to eq false
       end
     end

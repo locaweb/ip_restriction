@@ -1,5 +1,5 @@
 describe IpRestriction::IpsRetriever do
-  describe "#office_ips" do
+  describe '#office_ips' do
     let(:file_path) { File.expand_path('../../../fixtures/ips.yml', __FILE__) }
 
     before do
@@ -15,7 +15,7 @@ describe IpRestriction::IpsRetriever do
     end
 
     it 'returns office ips' do
-      expect(subject.office_ips).to eq ["10.10.10.10", "20.20.20.20"]
+      expect(subject.office_ips).to eq ['10.10.10.10', '20.20.20.20']
     end
   end
 end

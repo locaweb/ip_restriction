@@ -11,7 +11,7 @@ describe IpRestriction::IpLoader do
     end
 
     context 'when yaml file does not exist' do
-      subject { described_class.new("/tmp/anyfile.txt") }
+      subject { described_class.new('/tmp/anyfile.txt') }
 
       it 'returns an empty array' do
         expect(subject).to receive(:warn)
