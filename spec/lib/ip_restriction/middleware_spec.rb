@@ -1,3 +1,5 @@
+require 'ip_restriction/middleware'
+
 describe IpRestriction::Middleware do
   describe '#call' do
     let(:app) { double(:app) }
