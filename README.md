@@ -42,6 +42,18 @@ Then in you routes add a constraint.
 mount Sidekiq::Web, at: '/sidekiq', constraints: IpRestriction::AllowedIpsConstraint.new
 ```
 
+### Rack Middleware
+`require 'ip_restriction/middleware'`
+
+`use IpRestriction::Middleware`
+
+```ruby
+  map '/sidekiq' do
+    use IpRestriction::Middleware
+    mount Sidekiq::web
+  end
+```
+
 ## Usage manually
 
 You can check if an IP is allowed manually.
