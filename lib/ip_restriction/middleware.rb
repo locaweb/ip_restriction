@@ -12,7 +12,7 @@ module IpRestriction
       if constraint.checker.allowed?(env["REMOTE_ADDR"])
         @app.call(env)
       else
-        [404, {}, ['']]
+        [404, {'Content-Type' => 'text/html'}, ['Not found!']]
       end
     end
 

@@ -31,7 +31,7 @@ describe IpRestriction::Middleware do
       end
 
       it 'returns 404' do
-        expect(subject.call(env)).to eql([404, {}, ['']])
+        expect(subject.call(env)).to eql([404, {'Content-Type' => 'text/html'}, ['Not found!']])
       end
     end
   end
