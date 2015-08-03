@@ -2,7 +2,7 @@ require 'yaml'
 
 module IpRestriction
   class IpLoader
-    DEFAULT_IPS = ['127.0.0.1']
+    DEFAULT_IPS = ['127.0.0.1', '::1']
 
     attr_reader :file_path
 
