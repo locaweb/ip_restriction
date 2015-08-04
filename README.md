@@ -24,11 +24,12 @@ Or install it yourself as:
 
 ## Usage with Ruby on Rails
 
-Create a yml file with the list of IPs.
+Create a yml file with the list of IPs. IPV4 or IPV6
 ```yaml
 ips:
   - 10.20.30.1/24
   - 192.168.1.1/22
+  - 2001:db8::/32
 ```
 
 Configure the IpRestriction to load your yml file.
